@@ -252,7 +252,7 @@ then
 			MISSING_DEBS="$REQ $MISSING_DEBS"
 		fi
 	done
-	[ -n "$MISSING_DEBS" ] && error "Please install the following packages: $MISSING_DEBS"
+	#[ -n "$MISSING_DEBS" ] && error "Please install the following packages: $MISSING_DEBS"
 elif [ -e /etc/pacman.conf ]
 then
 	[ $(pacman -Qi $ARCHDEBS  2>&1 | grep "was not found" | wc -l) -ne 0 ] && error "Please install the following packages: $ARCHDEBS"
